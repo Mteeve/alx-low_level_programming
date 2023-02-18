@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <unistd.h>
 /**
  * main - Entry point
@@ -30,7 +31,6 @@ int main(void)
 					}
 					else
 					{
-{
 					putchar(',');
 					putchar(' ');
 					}
