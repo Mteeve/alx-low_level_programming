@@ -1,16 +1,22 @@
 #include <stdio.h>
-#include <unistd.h>
-
 /**
- * main - Entry point
- *
- * Description: 'and that piece of art is useful" - Dora Korpar, 2015-10-19'
- *
- * Return: Always 0 (Success)
- */
-
+* main - print if the number is postive, zero, or negative
+*
+* Description: using the main function
+* this program prints "Programming is positive, zero, or negative
+* Return: 0
+*/
 int main(void)
 {
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-	return (1);
+char c;
+for (c = '0'; c <= '9'; c++)
+{
+putchar(c);
+}
+for (c = 'a'; c <= 'f'; c++)
+{
+putchar(c);
+}
+putchar(' ');
+return (0);
 }
