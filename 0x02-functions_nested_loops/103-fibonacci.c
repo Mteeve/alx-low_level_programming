@@ -6,7 +6,7 @@
 	 * followed by a new line
 	 * Return: Always 0 (Success)
 	 */
-	int main(void)
+	int main finds and prints the sum of the even"-"valued terms(void)
 	{
 		int i;
 		unsigned long int j, k, next, sum;

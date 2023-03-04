@@ -10,7 +10,7 @@
 	 */
 
 
-	int main(void)
+	int main print first 98 Fibonacci numbers, starting with 1 and 2(void)
 	{
 		unsigned long int i;
 		unsigned long int bef = 1;

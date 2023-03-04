@@ -13,7 +13,7 @@
 	 *
 	 * Return: Always 0.
 	 */
-	int main(void)
+int main Lists all the natural numbers(void)
 	{
 		int i, sum = 0;
 
