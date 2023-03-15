@@ -1,58 +1,42 @@
-#include "main.h"		
+#include "main.h"
 #include <stdlib.h>
-/**
-* str_concat - get ends of input and add together for size
-* @s1: input one to concat
-* @s2: input two to concat
-* Return: concat of s1 and s2		
-*/
-		
-char *str_concat(char *s1, char *s2)
-		
-{
-	char *conct;
-		
-	int i, ci;
-		
-	if (s1 == NULL)
-		
-		s1 = "";
-		
-	if (s2 == NULL)
-		
-		s2 = "";
-		
-		i = ci = 0;
-		
-	while (s1[i] != '\0')
-		
-		i++;
-		
-	while (s2[ci] != '\0')
-		
-		ci++;
-		
-	conct = malloc(sizeof(char) * (i + ci + 1));
-		
-	if (conct == NULL)		
-		return (NULL);
+#include <stdio.h>
 
-	i = ci = 0;	
-	while (s1[i] != '\0')
-		
-	{
-		conct[i] = s1[i];
-		i++;
-	}
-			
-	while (s2[ci] != '\0')
-		
-	{
-		conct[i] = s2[ci];
-		i++, ci++;
-	}
-		
-	conct[i] = '\0';
-		
-	return (conct);		
+/**
+ * str_concat - function that concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: Null if not successful
+ */
+
+char *str_concat(char *s1, char *s2)
+{
+	unsigned int night1 = 0, night2 = 0;
+	char *ptr, *burn;
+
+	ptr = s1;
+
+	if (s1)
+		while (*ptr++)
+			night1++;
+	else
+		s1 = "";
+	ptr = s2;
+	if (s2)
+		while (*ptr++)
+			night2++;
+
+	else
+		s2 = "";
+	burn = malloc(night1 + night2 + 1);
+	if (!burn)
+		return (NULL);
+	ptr = burn;
+	while (*s1)
+		*ptr++ = *s1++;
+	while (*s2)
+		*ptr++ = *s2++;
+	*ptr = 0;
+
+	return (burn);
 }
