@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-*find_listint_loop - finds the loop in the linked lists.
+*find_listint_loop - finds the loop the linked lists.
 *@head: linked lists to search for.
 *
 *Return: address of the node where the loop starts, or NULL.
@@ -24,13 +24,13 @@ fast = fast->next->next;
 slow = slow->next;
 if (fast == slow)
 	{
-		slow = head;
-			while (slow != fast)
-				{
-					slow = slow->next;
-						fast = fast->next;
-				}
-return (fast);
+	slow = head;
+	while (slow != fast)
+		{
+		slow = slow->next;
+		fast = fast->next;
+		}
+	return (fast);
 	}
 }
 
