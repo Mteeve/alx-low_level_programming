@@ -1,21 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* getBit - Returns the value of a bit at a given index in a binary number.
+* get_bit - Returns the value of a bit at a given index in a binary number.
 *
-* @number: The binary number to search.
+* @n: The binary number to search.
 * @index: The index of the bit to retrieve.
 *
 * Return: The value of the bit at the given index, or -1 if the index is
 *         out of range.
 */
 
-int getBit(int number, int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
-if (index < 0 || index >= 32)
+int bit_val;
+if (index >= sizeof(unsigned long int) * 8)
 {
 return (-1);
 }
 
-return ((number >> index) & 1);
+bit_val = (n >> index) & 1;
+
+return ((bit_val) ? 1 : 0);
 }
