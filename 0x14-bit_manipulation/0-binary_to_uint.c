@@ -26,4 +26,4 @@ unsigned int binary_to_uint(const char *binary)
     }
 
     return (result);
-
+}
